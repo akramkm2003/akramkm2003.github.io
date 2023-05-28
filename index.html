@@ -27,7 +27,17 @@
     rel="stylesheet">
 
     <link rel="manifest" href="./manifest.json">
-
+    <style>
+    #btnAdd {
+      display: none;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+    </style>
 </head>
 
 <body id="top">
@@ -457,7 +467,7 @@ SafeHaul Technologies adopts a collaborative approach by working closely with cl
   </main>
 
 
-
+  C:\Users\BOSS\Desktop\safehaul\SafehaulTechnologies.github.io\assets\images\blog-3.jpg
 
 
   <!-- 
@@ -632,41 +642,7 @@ SafeHaul Technologies adopts a collaborative approach by working closely with cl
     <ion-icon name="arrow-up-outline"></ion-icon>
   </a>
 
-  <button onclick="installApp()">Add to Home Screen</button>
 
-  <script>
-    let deferredPrompt;
-
-    window.addEventListener('beforeinstallprompt', (event) => {
-      // Prevent the default prompt from showing
-      event.preventDefault();
-
-      // Store the event for later use
-      deferredPrompt = event;
-
-      // Show your custom "Add to Home Screen" button
-      document.querySelector('button').style.display = 'block';
-    });
-
-    function installApp() {
-      if (deferredPrompt) {
-        // Show the prompt
-        deferredPrompt.prompt();
-
-        // Wait for the user to respond to the prompt
-        deferredPrompt.userChoice.then((choiceResult) => {
-          if (choiceResult.outcome === 'accepted') {
-            console.log('User accepted the install prompt');
-          } else {
-            console.log('User dismissed the install prompt');
-          }
-
-          // Reset the deferred prompt variable
-          deferredPrompt = null;
-        });
-      }
-    }
-  </script>
 
 
 
